@@ -1,0 +1,19 @@
+{
+    "name": "vue-template-simple",
+    "version": "0.1.2",
+    "private": "true",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build"
+    },
+    "dependencies": {
+        "vue": "^2.6.10"
+    },
+    "author": "Yong",
+    "description": "这是测试的项目",
+    "devDependencies": {
+        "@vue/cli-service": "^3.11.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "license": "MIT"
+}
