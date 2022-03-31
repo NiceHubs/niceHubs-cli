@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-        "url": "https://github.com/flowerField/niceHubs-cli/issues"
+        "url": "https://github.com/nicehubs/nicehubs-cli/issues"
     },
-  "homepage": "https://github.com/flowerField/niceHubs-cli#readme",
+  "homepage": "https://github.com/nicehubs/nicehubs-cli#readme",
   "devDependencies": {
     "eslint": "^8.12.0",
     "husky": "^7.0.4"

@@ -5,18 +5,18 @@ const { name, version } = require("../package");
 
 const actions = {
     create: {
-        description: 'create project with niceHubs-cli',
+        description: 'create project with nicehubs-cli',
         alias: 'c',
         examples: [
-            'niceHubs-cli create <project-name>',
+            'nicehubs-cli create <project-name>',
         ],
     },
     config: {
         description: 'config info',
         alias: 'conf',
         examples: [
-            'niceHubs-cli config get <k>',
-            'niceHubs-cli config set <k> <v>',
+            'nicehubs-cli config get <k>',
+            'nicehubs-cli config set <k> <v>',
         ],
     },
     '*': {
@@ -46,4 +46,4 @@ program.on('--help', () => {
     });
 });
 
-program.version(`niceHubs-cli version = ${version}`).parse(process.argv);
+program.version(`nicehubs-cli version = ${version}`).parse(process.argv);

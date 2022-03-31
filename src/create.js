@@ -15,12 +15,12 @@ downloadGitRepo = promisify(downloadGitRepo);
 const { downloadDirectory } = require('../util/constants.js');
 
 async function getRepositoryList() {
-    const { data } = await axios.get("https://api.github.com/orgs/NiceHubs-template/repos");
+    const { data } = await axios.get("https://api.github.com/orgs/nicehubs-template/repos");
     return data;
 }
 
 const getTagList = async (repo) => {
-    const { data } = await axios.get(`https://api.github.com/repos/NiceHubs-template/${repo}/tags`);
+    const { data } = await axios.get(`https://api.github.com/repos/nicehubs-template/${repo}/tags`);
     return data;
 };
 
@@ -33,7 +33,7 @@ const loading = (fn, message) => async (...args) => {
 };
 
 const downloadTask = async (repo, tag) => {
-    let url = `NiceHubs-template/${repo}`;
+    let url = `nicehubs-template/${repo}`;
     if (tag) url += `#${tag}`
     const dest = `${downloadDirectory}/${repo}`;
     console.log("dest", dest, "url", url);
