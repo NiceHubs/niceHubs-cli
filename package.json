@@ -1,10 +1,10 @@
 {
-  "name": "niceHubs-cli",
-  "version": "0.1",
+  "name": "nicehubs-cli",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "niceHubs-cli": "./bin/www"
+    "nicehubs-cli": "./bin/www"
   },
   "scripts": {
     "lint":"eslint src",
