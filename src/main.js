@@ -32,7 +32,7 @@ Object.keys(actions).forEach((action) => {
         .alias(actions[action].alias)
         .description(actions[action].description)
         .action(() => {
-            console.log(`执行 action->`, action);
+            console.log(`run `, action);
             console.log(process.argv);
             require(path.resolve(__dirname, action))(...process.argv.slice(3));
         });

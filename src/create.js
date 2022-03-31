@@ -15,13 +15,12 @@ downloadGitRepo = promisify(downloadGitRepo);
 const { downloadDirectory } = require('../util/constants.js');
 
 async function getRepositoryList() {
-    const { data } = await axios.get("https://api.github.com/orgs/Yong-template/repos");
+    const { data } = await axios.get("https://api.github.com/orgs/NiceHubs-template/repos");
     return data;
 }
 
 const getTagList = async (repo) => {
-    // https: //api.github.com/repos/Yong-template/vue-simple-template/tags
-    const { data } = await axios.get(`https://api.github.com/repos/Yong-template/${repo}/tags`);
+    const { data } = await axios.get(`https://api.github.com/repos/NiceHubs-template/${repo}/tags`);
     return data;
 };
 
@@ -34,7 +33,7 @@ const loading = (fn, message) => async (...args) => {
 };
 
 const downloadTask = async (repo, tag) => {
-    let url = `Yong-template/${repo}`;
+    let url = `NiceHubs-template/${repo}`;
     if (tag) url += `#${tag}`
     const dest = `${downloadDirectory}/${repo}`;
     console.log("dest", dest, "url", url);
@@ -62,8 +61,8 @@ module.exports = async (projectName) => {
     });
 
     const dest = await loading(downloadTask, "download template ...")(repo, tag);
-    console.log("template", dest);
-    console.log("path.resolve(projectName)", path.resolve(projectName));
+    console.log(" 🍀  项目初始化成功～");
+    console.log(" 🏠  项目路径：", path.resolve(projectName));
     await ncp(dest, path.resolve(projectName));
 
     if (!fs.existsSync(path.join(dest, 'render.js'))) {
